@@ -136,3 +136,7 @@ audio.addEventListener('loadedmetadata', function() {time = audio.duration;});
 audio.addEventListener('ended', playNext);
 audio.addEventListener('seeking', seek);
 audio.addEventListener('timeupdate', progressHandler);
+progress.addEventListener('input', function() {
+    const value = this.value;
+    this.style.background = `linear-gradient(to right, #82CFD0 0%, #82CFD0 ${value}%, #fff ${value}%, white 100%)`
+  })
