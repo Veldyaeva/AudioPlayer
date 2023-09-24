@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./index.css">
+    <title>Document</title>
+</head>
+<body>
+   <div class="wrapper">
+    <div class="audio-player">
+    <!--audio src="/music/07-Leonard Cohen - Happens To The Heart.mp3"></audio-->
+    <div class="author"></div>
+    <div class="album"></div>
+    <div class="name"></div>
+    <button class="play-prev">Play prev</button>
+    <button class="play-btn"></button>
+    <button class="play-next">Play next</button>
+    
+    <div class="player-controls scrubber">
+    <span class="duration">
+        <label class="curr"></label>
+        <progress value="0" max="1"></progress>
+        <label class="tot"></label>
+    </span>
+    <small style="float: left; position: relative; left: 15px;" id="start-time"></small>
+    <small style="float: right; position: relative; right: 20px;" id="end-time"></small>
+   </div>
+    </div>
+   <script src="./style.js"></script>
+</body>
+</html>
