@@ -17,16 +17,22 @@ const author4 = 'Jimi Hendrix';
 const author5 = 'Andy M. Stewart';
 
 const album1 = 'Thanks For the Dance';
-const album2 = '2';
+const album2 = 'Eyes Closed';
 const album3 = '3';
 const album4 = 'The Jimi Hendrix Experience';
 const album5 = '5';
 
 const cover1 = './asserts/cohen.jpg';
-const cover2 = '2';
-const cover3 = '3';
-const cover4 = 'The Jimi Hendrix Experience';
-const cover5 = '5';
+const cover2 = './asserts/Ed-Sheeran-Eyes-Closed-scaled.jpg';
+const cover3 = './asserts/jethro.jpg';
+const cover4 = './asserts/jimmi.jpg';
+const cover5 = './asserts/AndyM.Stewart.jpg';
+
+const coverName1 = 'cohen';
+const coverName2 = 'sheeran';
+const coverName3 =  'jethro';
+const coverName4 ='jimi';
+const coverName5 ='andy';
 
 const playBtn = document.querySelector('.play-btn');
 const nextBtn = document.querySelector('.play-next');
@@ -46,6 +52,7 @@ let playListName=[name1,name2, name3, name4,name5];
 let playListAuth=[author1,author2, author3, author4, author5];
 let playListAlbum=[album1,album2, album3, album4,album5];
 let playListCover=[cover1,cover2, cover3, cover4,cover5];
+let coverName = [coverName1, coverName2, coverName3, coverName4, coverName5];
 let trackNum=0;
 let time = audio.duration;
 let name = audio.title;
@@ -69,16 +76,17 @@ function playAudio(i){
     auth.textContent = playListAuth[i];
     album.textContent = playListAlbum[i];
     track.textContent = playListName[i];
-    setBg(playListCover[i]);
+    console.log(playListCover[i]);
+    setBg(i);
 }
 
-function setBg(cover) {  
+function setBg(i) {  
     const img = new Image();
-    img.src = cover;
-    img.onload = () => {      
+    img.src = playListCover[i];
+        img.onload = () => {     
        
-        player.classList.add('.cohen');
-        console.log(cover, player.classList);
+        player.classList.add(coverName[i]);
+        console.log(coverName[i]);
     }; 
   }
 function playNext ()
