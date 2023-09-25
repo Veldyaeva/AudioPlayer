@@ -78,6 +78,10 @@ height: 600px;
 width: 600px;
   
 background-size: cover;
+  
+display: flex;
+  
+flex-direction: row;
 }
 
 .album-image {  

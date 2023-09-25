@@ -44,6 +44,7 @@ const track = document.querySelector('.name');
 const auth = document.querySelector('.author');
 const album = document.querySelector('.album');
 const player = document.querySelector('.audio-player');
+//const cover = document.querySelector('.cover');
 const audio = new Audio();
 
 let isPlay = false;
@@ -76,8 +77,7 @@ function playAudio(i){
     auth.textContent = playListAuth[i];
     album.textContent = playListAlbum[i];
     track.textContent = playListName[i];
-    console.log(playListCover[i]);
-    setBg(i);
+        setBg(i);
 }
 
 function setBg(i) {  
@@ -85,9 +85,11 @@ function setBg(i) {
     img.src = playListCover[i];
         img.onload = () => {     
        
-        player.classList.add(coverName[i]);
-        console.log(coverName[i]);
-    }; 
+            let currentCover = playListCover[i];
+            console.log( `url: (${currentCover})`);
+            
+            player.style.setProperty("background-image", `url('${currentCover}')`);
+        }; 
   }
 function playNext ()
 {
