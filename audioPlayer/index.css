@@ -30,6 +30,15 @@ justify-content: space-between;
   background-image: url('MbJn41l.png');
 }}  
 
+.play-prev{
+  background-image: url('backward.png');
+  background-size: cover;width: 75px;height: 75px;
+}
+.play-next{
+  background-image: url('forward.png');
+  background-size: cover;width: 75px;height: 75px;
+}
+
 progress {
   height: 5px;
   margin-top: 25px;
@@ -51,7 +60,7 @@ progress::-moz-progress-bar {
   background-color: #41E847;
 }*/
 
-.progress {
+progress {
   background: linear-gradient(to right, #82CFD0 0%, #82CFD0 40%, #fff 40%, #fff 100%);
   border: solid 2px #82CFD0;
   border-radius: 8px;
@@ -62,7 +71,7 @@ progress::-moz-progress-bar {
   -webkit-appearance: none;
 }
 
-.progress::-webkit-slider-thumb {
+progress::-webkit-slider-thumb {
   width: 20px;
   height: 20px;
   border-radius: 50%;
