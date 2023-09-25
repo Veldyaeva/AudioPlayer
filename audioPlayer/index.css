@@ -46,20 +46,6 @@ progress {
   background-color: #286C2D;
 }
 
-/*progress::-webkit-progress-bar {
-  border: none;
-  background-color: #286C2D;
-}
-
-progress::-webkit-progress-value {
-  background-color: #41E847;
-}
-
-progress::-moz-progress-bar {
-  border: none;
-  background-color: #41E847;
-}*/
-
 progress {
   background: linear-gradient(to right, #82CFD0 0%, #82CFD0 40%, #fff 40%, #fff 100%);
   border: solid 2px #82CFD0;
@@ -85,65 +71,71 @@ progress::-webkit-slider-thumb {
 
 .audio-player {
   
-/* border: 1px solid #acacac; */
-  
 text-align: center;
   
-/* display: flex; */
-  
-/* flex-flow: row; */
-  
-/* margin: 4rem 0 4rem 0; */
+height: 600px;
   
 width: 600px;
-
-.album-image {
-  
-min-height: 100px;
-  
-width: 100px;
   
 background-size: cover;
 }
+
+.album-image {  
+min-height: 100px;
+width: 100px;
+background-size: cover;
+}
+
 .player-controls {
   
-align-items: center;
-  
+align-items: center;  
 justify-content: center;
-  
 margin-top: 2.5rem;
-  
 flex: 3;
-  
+}
+
 progress {
       width: 90%;
     }
-  
+
 progress[value] {
-      -webkit-appearance: none;
-  
+-webkit-appearance: none;
 appearance: none;
-  
 background-color: white;
-  
 color: blue;
-  
 height: 5px;
     }
   
-progress[value]::-webkit-progress-bar {
-      background-color: white;
-  
+progress[value]::-webkit-progress-bar 
+{
+background-color: white;
 border-radius: 2px;
-  
 border: 1px solid lighten(#acacac, 20%);
-  
 color: blue;
     }
-  .cohen{
-  
+
+.cohen{
 background-image: url(./asserts/cohen.jpg);
   }
+.sheeran
+{
+  
+background-image: url('./asserts/Ed-Sheeran-Eyes-Closed-scaled.jpg');
+}  
+.jimi
+{
+  
+background-image: url('./asserts/jimmi.jpg');
+}
+.jethro
+{
+  
+background-image: url('./asserts/jethro.jpg');
+}
+.andy{
+  
+background-image: url('./asserts/AndyM.Stewart.jpg');
+}
   
 progress::-webkit-progress-value {
       background-color: blue;
@@ -152,9 +144,5 @@ progress::-webkit-progress-value {
 p {
       font-size: 1.6rem;
     }
-  }
-;
+
   
-background-image: unset;
-}
- 
