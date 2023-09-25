@@ -133,8 +133,12 @@ function progressHandler() {
     const percentLoaded = Math.round(audio.currentTime*100/time);
     console.log(percentLoaded);
     progressBar.value = percentLoaded/100;
-    curr.textContent = progressBar.value;
-    tot.textContent = time;
+    
+    curr.textContent = `${Math.floor(audio.currentTime/60)}.${Math.floor(audio.currentTime%60)}`;
+    
+    let totalMin = (Math.floor(time/60));
+    let totalSec = Math.floor(time % 60);
+    tot.textContent = `${totalMin}.${totalSec}`;
    }
   
 
