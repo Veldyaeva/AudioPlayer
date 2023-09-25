@@ -12,14 +12,16 @@ flex-direction: row;
 justify-content: space-between;
 
 }
+a{color: antiquewhite;}
 .wrapper
 {
-  display: table-cell;
+  display: flex;
   vertical-align: middle;
-  margin: 0;
+  margin-bottom: -30px;
   padding: 0;
   width: 600px;
-  height: 600px;
+  min-height: 100%;
+  align-items: center;
 }
 
 .play-btn{
@@ -150,3 +152,4 @@ p {
     }
 
   
+.footer{display: flex;justify-content: space-evenly;position: absolute;left: 0;bottom: 0;width: 90%;align-self: center;height: 30px;color: antiquewhite;}
